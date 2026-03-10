@@ -1,36 +1,38 @@
-# Desafio Super Trunfo - Países - Cadastro das Cartas
+# Desafio: Super Trunfo em C - Nível Novato 🃏
 
-Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam os atributos das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países", onde você comparará os atributos das cidades.
+Este projeto faz parte da trilha de aprendizado de **Engenharia de Computação**, focado nos fundamentos da linguagem C. O objetivo é criar a base de um jogo de "Super Trunfo de Países", permitindo o cadastro e a exibição de cartas de cidades.
 
-A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
+## 🚀 Objetivo do Desafio
+Construir um sistema simples para cadastrar e exibir informações de duas cidades (cartas). O foco principal é praticar:
+* Entrada de dados via teclado (`scanf`, `fgets`).
+* Manipulação de diferentes tipos de variáveis (`char`, `int`, `float`).
+* Saída de dados formatada (`printf`).
+* Gerenciamento de buffer de memória.
 
-O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior.  **Você deve escolher qual desafio quer realizar.**
+## 📋 Funcionalidades
+O programa permite a inserção dos seguintes dados para duas cartas:
+- **Estado:** Uma letra de 'A' a 'H'.
+- **Código da Carta:** Letra do estado + número (ex: A01, B03).
+- **Nome da Cidade:** Nome completo da cidade (suporta nomes compostos).
+- **População:** Número total de habitantes.
+- **Área (km²):** Área territorial da cidade.
+- **PIB:** Produto Interno Bruto da cidade.
+- **Pontos Turísticos:** Quantidade de pontos turísticos disponíveis.
 
-🚨 **Atenção:** O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções `scanf` para ler os dados e `printf` para exibi-los.
+## 🛠️ Tecnologias Utilizadas
+* **Linguagem C**: Padrão de ensino para lógica e sistemas.
+* **VS Code**: Ambiente de desenvolvimento.
+* **Compilador GCC**: Para execução do código.
 
-## 🎮 Nível Novato: Cadastro Básico
+## 💡 Diferenciais da Minha Implementação
+Como o desafio proibia estruturas de repetição e decisão, foquei na **qualidade técnica do código sequencial**:
+- **Tratamento de Buffer:** Uso estratégico de `getchar()` e espaços no `scanf` para evitar que o programa pulasse leituras.
+- **Nomes Compostos:** Implementação do `fgets` junto com `strcspn` para permitir nomes como "São Paulo" ou "Rio de Janeiro" sem erros.
+- **Saída Formatada:** Organização dos dados em colunas legíveis e limitação de casas decimais para o PIB e Área.
 
-No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades.  Imagine um país dividido em oito estados (A a H), e cada estado com quatro cidades (1 a 4).  A combinação forma o código da carta (ex: A01, B02).
-
-🚩 **Objetivo:** Criar um programa em C que cadastra **duas** cartas com os seguintes atributos:
-
-*   População (`int`)
-*   Área (`float`)
-*   PIB (`float`)
-*   Número de pontos turísticos (`int`)
-
-⚙️ **Funcionalidades do Sistema:**
-
-*   O sistema permitirá ao usuário cadastrar os dados de **duas** cartas manualmente via terminal.
-*   Após o cadastro, o sistema exibirá os dados de cada cidade de forma organizada.
-
-📥 **Entrada** e 📤 **Saída de Dados:**
-
-*   O usuário insere os dados de cada carta interativamente via `scanf`.
-*   O programa exibe os dados cadastrados usando `printf`, com cada atributo em uma nova linha.
-
-**Simplificações para o Nível Novato:**
-
-*   Cadastre apenas **duas** cartas.
-*   Concentre-se na leitura, armazenamento e exibição. Não implemente comparações ou outros recursos.
-*   **Não use** laços (`for`, `while`) ou condicionais (`if`, `else`).
+## 📖 Como Executar
+1. Certifique-se de ter um compilador C instalado (GCC).
+2. Clone o repositório ou baixe o arquivo `.c`.
+3. Abra o terminal e compile o código:
+   ```bash
+   gcc super_trunfo.c -o super_trunfo
